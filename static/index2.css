@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:wght@300;400&display=swap");
+
+:root {
+    --white: hsl(0, 0%, 100%);
+    --dark-blue: hsl(233, 26%, 24%);
+    --grayish-blue: hsl(233, 8%, 62%);
+    --lime-green: hsl(136, 65%, 51%);
+    --bright-cyan: hsl(192, 70%, 51%);
+}
+
+html {
+    overflow-x: hidden;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Public Sans", sans-serif;
+    overflow-x: hidden;
+    background: var(--white);
+    margin: 0;
+    padding: 0; 
+}
+
+.wholecontainer {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-image: url('images/fertilizer.jpeg');
+    background-size: 100% 100%;
+}
+
+
+
+.navbar {
+    width: 100%;
+    height: 90px;
+    z-index: 100;
+    position: absolute;
+    background: var(--white);
+    box-shadow: 0px 5px 30px rgba(0, 0, 0, 0.12);
+}
+
+.navbar .container2 {
+    z-index: 100;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+.navbar .logo {
+    padding: 10px 15px;
+}
+
+.nav-link ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    z-index: 500;
+}
+
+.nav-link ul li {
+    padding: 10px 13px;
+    position: relative;
+}
+
+.nav-link ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: var(--grayish-blue);
+}
+
+a:hover {
+    background-color: aqua;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: black;
+    padding: 10px;
+}
+
+.container {
+    display: block;
+    text-align: center;
+}
+
+.titleheading {
+    color: rgb(45, 224, 171);
+    font-size: 60px;
+    text-align: center;
+    /* margin-bottom: 5px; */
+}
+.container3 {
+    text-align: left;
+    display: flex;
+    margin-left: 200px;
+    
+}
+
+.row1 {
+    color: blanchedalmond;
+}
+
+.row2{
+    /* display: flex; */
+    /* margin-left: 10px; */
+    align-items: flex-start;
+    
+}
+
+.row3{
+    margin-left: 300px;
+    display: block;
+}
+
+.row4{
+    text-align: center;
+}
+
+input {
+    float: right;
+    margin-top: 20px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    outline: none;
+    border: none;
+    height: 30px;
+
+}
+
+label {
+    margin-top: 30px;
+    float: left;
+    color: white;
+    font-weight: bold;
+}
+
+button {
+    padding: 15px 12px;
+    border-radius: 30px;
+    outline: none;
+    margin-top: 20px;
+    justify-content: center;
+    border: none;
+    height: 44px;
+    width: 150px;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--lime-green), var(--bright-cyan));
+    cursor: pointer;
+}

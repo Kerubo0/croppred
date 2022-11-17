@@ -1,0 +1,114 @@
+<html>
+
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index_croppred_page</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index2.css')}}">
+</head>
+
+<body>
+
+  <section class="wholecontainer">
+    
+    <nav class="navbar">
+      <div class="cotainer2">
+          <div class="logo"><img src="" alt=""></div>
+
+          <div class="nav-link">
+              <ul>
+                <li><a href="/">Home</a></li>
+                <li><a href="/click_for_pred">Crop prediction</a></li>
+                <li><a href="/index_fert">Fertilizer prediction</a></li>
+                <li><a href="/about">About</a></li>
+              </ul>
+          </div>
+          
+      </div>
+    </nav>
+
+    <section class="container">
+      
+      <div class="titleheading">
+        <h3>Fertilizer Prediction</h3>
+      </div>
+      <div class="row1">
+        <div class="col-8">
+          <form method="POST" action="http://localhost:5000/results_fertilizer">
+            <div class="container3">
+              <div class="row2">
+                <div class="form-group col-md-4">
+                  <label for="ca">Calcium</label>
+                  <input type="text" class="form-control" id="ca" name="ca" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="mg">Magnesium</label>
+                  <input type="text" class="form-control" id="mg" name="mg" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="k">Pottasium</label>
+                  <input type="text" class="form-control" id="k" name="k" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="s">Sulphur</label>
+                  <input type="text" class="form-control" id="s" name="s" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="n">Nitrogen</label>
+                  <input type="text" class="form-control" id="n" name="n" required/>
+                </div>
+              </div>
+              <div class="row3">
+                <div class="form-group col-md-4">
+                  <label for="lime">Lime</label>
+                  <input type="text" class="form-control" id="lime" name="lime" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="c">Carbon</label>
+                  <input type="text" class="form-control" id="c" name="c" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="p">Phosporous</label>
+                  <input type="text" class="form-control" id="p" name="p" required/>
+                </div>
+                <div class="form-group col-md-4">
+                  <label for="moisture">Moisture</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="moisture"
+                    name="moisture"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="row4">
+              <button type="submit" class="col-md-3 m-4 btn btn-primary">
+                Submit
+              </button>
+            </div>
+            
+          </form>
+          <div class="col-4">
+            <div class="row">
+              <h4>Most Suitable Fertilizer</h4>
+              <h4>{{fert_type}}</h4>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    
+      <div > 
+        <form method="post" action="http://localhost:5000/click_for_pred">
+            <button type="submit" style="margin-left: 130px;" class="col-md-2 btn btn-primary">Go to Crop Prediciton</button>
+        </form>
+      </div>
+
+    </section>
+  </section>
+</body>
+
+</html>
